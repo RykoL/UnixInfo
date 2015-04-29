@@ -8,6 +8,7 @@
 #include <errno.h> //needed for errno
 #include <stdexcept> //needed for std::logic_error
 #include <string>
+#include <cstring>
 #include <sstream>
 #include <iostream>
 

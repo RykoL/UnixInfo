@@ -26,7 +26,7 @@ namespace System
 		if( readlink(path.str().c_str(), buffer, 512) == -1) //reading the symbolic link /proc/PID/exe 
 		{
 			delete [] buffer;
-			throw std::runtime_error("Information::getExecutionPath failed with error code: " + std::to_string(errno));
+			throw std::runtime_error("Information::getExecutionPath failed with following error: " + std::string{std::strerror(errno)});
 		}
 		
 		std::string symPath{buffer};
@@ -41,7 +41,7 @@ namespace System
 
 		if(uname(&info) != 0)
 		{
-			throw std::runtime_error("Information::getSystemInfo failed with error code: " + std::to_string(errno));
+			throw std::runtime_error("Information::getSystemInfo failed with following error: " + std::string{std::strerror(errno)});
 		}
 		else
 		{
