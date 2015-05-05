@@ -1,10 +1,16 @@
 #ifndef PROCESS_H
 #define PROCESS_H
 
+#include <sys/types.h>
+#include <signal.h>
+#include <unistd.h>
+#include <errno.h>
+#include <cstring>
 #include <string>
 #include <fstream>
 #include <stdexcept>
 #include <cstdio>
+#include <initializer_list>
 #include "Path.h"
 
 namespace System
@@ -17,7 +23,7 @@ namespace System
 		
 		static void start(const std::string &path);
 		static void start(const std::string &path,const std::initializer_list<std::string> &args);
-		
+
 		void stop();
 		void pause();
 		void resume();
