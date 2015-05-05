@@ -12,7 +12,7 @@ namespace System
 
 		namespace Path
 		{
-			std::string Combine(std::string path1,std::string path2)
+			inline std::string Combine(std::string path1,std::string path2)
 			{
 				if(path1.length() == 0 || path2.length() == 0)
 				{
