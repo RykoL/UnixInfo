@@ -7,7 +7,9 @@
 
 namespace System
 {
-	std::string TimeToString(time_t t)
+
+	//TODO: rewrite the function
+	inline std::string TimeToString(time_t t)
 	{
 		std::tm *tm = std::localtime(&t);
 
