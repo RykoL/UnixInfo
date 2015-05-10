@@ -4,19 +4,33 @@ namespace System
 {
 	Process::Process(int pid)
 	{
-		mReader.open("/proc/" + std::to_string(pid));
+		mReader.open("/proc/" + std::to_string(pid) + "/stat");
 
 		if(!mReader.is_open())
 		{
 			throw std::runtime_error("Process::Process failed to open file");
 		}
 
+		readData();
 	}
+
+	//TODO: add remaining variables
+	Process::Process(const Process &proc)
+	{
+		mData = proc.mData;
+		mPid = proc.mPid;
+
+		mProcessName = proc.mProcessName;
+		mState = proc.mState;
+	}
+
 
 	Process::~Process()
 	{
 		mReader.close();
 	}
+
+
 
 	//were basically reading from /proc/[pid]/stat
 	void Process::readData()
@@ -25,11 +39,45 @@ namespace System
 
 		char pName[512];
 		char state;
-		//std::sscanf from the c library comes handy here, because we dont need to deal with file parsing
-		std::sscanf(mData.c_str(), "%d %s %c %*d %d %*d %d", &mPid, pName, &state , &mProcessGroup , &tty);
+		//std::sscanf from the c library comes handy here, because we dont have to deal with file parsing
+		std::sscanf(mData.c_str(), "%d %s %c", &mPid, pName, &state);
 
 		mProcessName = pName;
+		mExecutionPath = getExPath();
 		mState = charToState(state);
+	}
+
+	//function to retrieve the full execution path of the process binary
+	std::string Process::getExPath()
+	{
+		std::string path = "/proc/" + std::to_string(mPid) + "/exe";
+
+		//still looking for a way to dynamically get the required buffer size
+		//for the symlink, stat wont help here.
+		char * buffer = new char[PATH_MAX];
+
+		if(readlink(path.c_str(), buffer, PATH_MAX) == -1)
+		{
+			delete [] buffer;
+			throw std::runtime_error("Process::getExPath failed with following error: " + std::string{std::strerror(errno)});
+		}
+
+		std::string exPath{buffer};
+
+		delete [] buffer;
+		return exPath;
+	}
+
+	void Process::getCmd()
+	{
+		mReader.open("/proc/" + std::to_string(mPid) + "/cmdline");
+
+		if(!mReader.is_open())
+		{
+			throw std::runtime_error("Process::getCmd: could not open file");
+		}
+
+		std::getline(mReader,mCommandLine);
 	}
 
 	Process::State Process::charToState(char c)
@@ -56,13 +104,17 @@ namespace System
 		return State::Stopped;
 	}
 
+
+
 	void System::Process::stop()
 	{
 		if(kill(mPid, SIGTERM) != 0)
 		{
-			throw std::runtime_error("Process::kill failed with following error. " + std::string{std::strerror(errno)});
+			throw std::runtime_error("Process::stop failed with following error. " + std::string{std::strerror(errno)});
 		}
 	}
+
+
 
 	void System::Process::pause()
 	{
@@ -72,14 +124,19 @@ namespace System
 		}
 	}
 
+
+
 	void System::Process::resume()
 	{
 		if(kill(mPid, SIGCONT) != 0)
 		{
-			throw std::runtime_error("Process::pause failed with following error. " + std::string{std::strerror(errno)});
+			throw std::runtime_error("Process::resume failed with following error. " + std::string{std::strerror(errno)});
 		}
 	}
 
+
+
+	//if we wanna start a process without parameters
 	void System::Process::start(const std::string &path)
 	{
 		pid_t pid;
@@ -97,6 +154,8 @@ namespace System
 			}
 		}
 	}
+
+
 
 	//Description: Spawns a process with specified arguments
 	void System::Process::start(const std::string &path,const std::initializer_list<std::string> &args)
