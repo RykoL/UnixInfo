@@ -88,7 +88,7 @@ namespace IO
 		}
 		else
 		{
-			std::cerr<< "No acces to the file " << mPath << std::endl;
+			std::cerr<< "No access to the file " << mPath << std::endl;
 		}
 	}
 
@@ -104,7 +104,7 @@ namespace IO
 
 		else
 		{
-			std::cerr << "No accss to the file " << path << std::endl;
+			std::cerr << "No access to the file " << path << std::endl;
 		}
 	}
 
