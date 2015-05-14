@@ -21,7 +21,7 @@ namespace System
 
 			int fd;
 
-			if((fd = open("/home/rico/Programmieren/C++/system/modulet/modtest.ko",O_RDONLY)) == -1)
+			if((fd = open(path,O_RDONLY)) == -1)
 			{
 				throw std::runtime_error("failed to obtrain file descriptor. " + std::string{std::strerror(errno)});  
 			}
