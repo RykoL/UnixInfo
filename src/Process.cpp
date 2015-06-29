@@ -12,6 +12,8 @@ namespace System
 		}
 
 		readData();
+
+		mReader.close();
 	}
 
 	//TODO: add remaining variables
@@ -22,6 +24,8 @@ namespace System
 
 		mProcessName = proc.mProcessName;
 		mState = proc.mState;
+		mExecutionPath = proc.mExecutionPath;
+		mCommandLine = proc.mCommandLine;
 	}
 
 
@@ -168,7 +172,9 @@ namespace System
 		std::initializer_list<std::string>::iterator it;
 
 		//retrieve the filename for argv[0]
-		std::string filename = "." + path.substr(path.find_last_of("/"), path.size());
+		std::string filename = "";
+		if(path.find('/',0) != std::string::npos)
+			filename = "." + path.substr(path.find_last_of("/"), path.size());
 		arguments[0] = const_cast<char*>(filename.c_str());
 
 		//transfer the arguments from the initializer_list to the argument array
@@ -201,5 +207,38 @@ namespace System
 				throw std::runtime_error("Process::start failed with following error. " + std::string{std::strerror(errno)});
 			}
 		}
+	}
+
+	/* Retrieves the shared libraries loaded by the specified process
+	 *
+	 *
+	*/
+	std::vector<std::string> Process::getLoadedObjects()
+	{
+		//to get the shared libraries we must read from the maps file of the proc filesystem
+
+		mReader.open("/proc/" + std::to_string(mPid) +  "/maps");
+		std::vector<std::string> objects;
+
+		if(mReader.is_open())
+		{
+			
+			std::string buffer;
+			std::string pattern = R"((\/.*\.so))";
+
+			std::regex rgx(pattern);
+
+			while(std::getline(mReader, buffer))
+			{
+				std::smatch match;
+
+				if(std::regex_search(buffer,match, rgx))
+				{
+					objects.push_back(match.str());
+				}
+			}
+		}
+
+		return objects;
 	}
 }

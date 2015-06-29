@@ -13,6 +13,9 @@
 #include <cstdio>
 #include <initializer_list>
 #include <iostream>
+#include <vector>
+#include <memory>
+#include <regex>
 
 namespace System
 {
@@ -46,8 +49,9 @@ namespace System
 
 		int getPid() const noexcept {return mPid;};
 		State getState() const noexcept {return mState;};
-		
 
+		std::vector<std::string> getLoadedObjects();
+		
 	private:
 		void readData();
 		State charToState(char c);
