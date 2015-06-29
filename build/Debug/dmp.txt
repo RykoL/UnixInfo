@@ -1,0 +1,606 @@
+
+uxInfo:     Dateiformat elf64-x86-64
+uxInfo
+Architektur: i386:x86-64, Flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+Startadresse 0x0000000000409700
+
+Programm-Header:
+    PHDR off    0x0000000000000040 vaddr 0x0000000000400040 paddr 0x0000000000400040 align 2**3
+         filesz 0x00000000000001f8 memsz 0x00000000000001f8 flags r-x
+  INTERP off    0x0000000000000238 vaddr 0x0000000000400238 paddr 0x0000000000400238 align 2**0
+         filesz 0x000000000000001c memsz 0x000000000000001c flags r--
+    LOAD off    0x0000000000000000 vaddr 0x0000000000400000 paddr 0x0000000000400000 align 2**21
+         filesz 0x00000000000113d0 memsz 0x00000000000113d0 flags r-x
+    LOAD off    0x0000000000011dc8 vaddr 0x0000000000611dc8 paddr 0x0000000000611dc8 align 2**21
+         filesz 0x0000000000000548 memsz 0x00000000000008d0 flags rw-
+ DYNAMIC off    0x0000000000011e08 vaddr 0x0000000000611e08 paddr 0x0000000000611e08 align 2**3
+         filesz 0x00000000000001f0 memsz 0x00000000000001f0 flags rw-
+    NOTE off    0x0000000000000254 vaddr 0x0000000000400254 paddr 0x0000000000400254 align 2**2
+         filesz 0x0000000000000044 memsz 0x0000000000000044 flags r--
+EH_FRAME off    0x000000000000eca0 vaddr 0x000000000040eca0 paddr 0x000000000040eca0 align 2**2
+         filesz 0x0000000000000674 memsz 0x0000000000000674 flags r--
+   STACK off    0x0000000000000000 vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**4
+         filesz 0x0000000000000000 memsz 0x0000000000000000 flags rw-
+   RELRO off    0x0000000000011dc8 vaddr 0x0000000000611dc8 paddr 0x0000000000611dc8 align 2**0
+         filesz 0x0000000000000238 memsz 0x0000000000000238 flags r--
+
+Dynamischer Abschnitt:
+  NEEDED               libstdc++.so.6
+  NEEDED               libgcc_s.so.1
+  NEEDED               libc.so.6
+  INIT                 0x0000000000409100
+  FINI                 0x000000000040e750
+  INIT_ARRAY           0x0000000000611dc8
+  INIT_ARRAYSZ         0x0000000000000030
+  FINI_ARRAY           0x0000000000611df8
+  FINI_ARRAYSZ         0x0000000000000008
+  GNU_HASH             0x0000000000400298
+  STRTAB               0x0000000000402fc8
+  SYMTAB               0x0000000000400c40
+  STRSZ                0x0000000000005461
+  SYMENT               0x0000000000000018
+  DEBUG                0x0000000000000000
+  PLTGOT               0x0000000000612000
+  PLTRELSZ             0x00000000000008b8
+  PLTREL               0x0000000000000007
+  JMPREL               0x0000000000408848
+  RELA                 0x00000000004087d0
+  RELASZ               0x0000000000000078
+  RELAENT              0x0000000000000018
+  VERNEED              0x0000000000408720
+  VERNEEDNUM           0x0000000000000003
+  VERSYM               0x000000000040842a
+
+Versionsreferenzen:
+  von libgcc_s.so.1 benötigt:
+    0x0b792650 0x00 08 GCC_3.0
+  von libc.so.6 benötigt:
+    0x0d696914 0x00 06 GLIBC_2.4
+    0x09691a75 0x00 03 GLIBC_2.2.5
+  von libstdc++.so.6 benötigt:
+    0x02297f85 0x00 09 GLIBCXX_3.4.5
+    0x0297f863 0x00 07 GLIBCXX_3.4.13
+    0x0297f864 0x00 05 GLIBCXX_3.4.14
+    0x056bafd3 0x00 04 CXXABI_1.3
+    0x08922974 0x00 02 GLIBCXX_3.4
+
+Sektionen:
+Idx Name          Größe     VMA               LMA               Datei-Off Ausr.
+  0 .interp       0000001c  0000000000400238  0000000000400238  00000238  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .note.ABI-tag 00000020  0000000000400254  0000000000400254  00000254  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  2 .note.gnu.build-id 00000024  0000000000400274  0000000000400274  00000274  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .gnu.hash     000009a4  0000000000400298  0000000000400298  00000298  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .dynsym       00002388  0000000000400c40  0000000000400c40  00000c40  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .dynstr       00005461  0000000000402fc8  0000000000402fc8  00002fc8  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  6 .gnu.version  000002f6  000000000040842a  000000000040842a  0000842a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  7 .gnu.version_r 000000b0  0000000000408720  0000000000408720  00008720  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  8 .rela.dyn     00000078  00000000004087d0  00000000004087d0  000087d0  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  9 .rela.plt     000008b8  0000000000408848  0000000000408848  00008848  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 10 .init         0000001a  0000000000409100  0000000000409100  00009100  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 11 .plt          000005e0  0000000000409120  0000000000409120  00009120  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 12 .text         0000504f  0000000000409700  0000000000409700  00009700  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .fini         00000009  000000000040e750  000000000040e750  0000e750  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .rodata       00000540  000000000040e760  000000000040e760  0000e760  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 15 .eh_frame_hdr 00000674  000000000040eca0  000000000040eca0  0000eca0  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 16 .eh_frame     00001bb4  000000000040f318  000000000040f318  0000f318  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 17 .gcc_except_table 00000504  0000000000410ecc  0000000000410ecc  00010ecc  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 18 .init_array   00000030  0000000000611dc8  0000000000611dc8  00011dc8  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 19 .fini_array   00000008  0000000000611df8  0000000000611df8  00011df8  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 20 .jcr          00000008  0000000000611e00  0000000000611e00  00011e00  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 21 .dynamic      000001f0  0000000000611e08  0000000000611e08  00011e08  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 22 .got          00000008  0000000000611ff8  0000000000611ff8  00011ff8  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 23 .got.plt      00000300  0000000000612000  0000000000612000  00012000  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 24 .data         00000010  0000000000612300  0000000000612300  00012300  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 25 .bss          00000378  0000000000612320  0000000000612320  00012310  2**5
+                  ALLOC
+ 26 .comment      0000004d  0000000000000000  0000000000000000  00012310  2**0
+                  CONTENTS, READONLY
+ 27 .debug_aranges 00000bc0  0000000000000000  0000000000000000  0001235d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 28 .debug_info   00021361  0000000000000000  0000000000000000  00012f1d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 29 .debug_abbrev 000028d2  0000000000000000  0000000000000000  0003427e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 30 .debug_line   00002e5d  0000000000000000  0000000000000000  00036b50  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 31 .debug_str    0000ee06  0000000000000000  0000000000000000  000399ad  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 32 .debug_ranges 00000c10  0000000000000000  0000000000000000  000487b3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+0000000000400238 l    d  .interp	0000000000000000              .interp
+0000000000400254 l    d  .note.ABI-tag	0000000000000000              .note.ABI-tag
+0000000000400274 l    d  .note.gnu.build-id	0000000000000000              .note.gnu.build-id
+0000000000400298 l    d  .gnu.hash	0000000000000000              .gnu.hash
+0000000000400c40 l    d  .dynsym	0000000000000000              .dynsym
+0000000000402fc8 l    d  .dynstr	0000000000000000              .dynstr
+000000000040842a l    d  .gnu.version	0000000000000000              .gnu.version
+0000000000408720 l    d  .gnu.version_r	0000000000000000              .gnu.version_r
+00000000004087d0 l    d  .rela.dyn	0000000000000000              .rela.dyn
+0000000000408848 l    d  .rela.plt	0000000000000000              .rela.plt
+0000000000409100 l    d  .init	0000000000000000              .init
+0000000000409120 l    d  .plt	0000000000000000              .plt
+0000000000409700 l    d  .text	0000000000000000              .text
+000000000040e750 l    d  .fini	0000000000000000              .fini
+000000000040e760 l    d  .rodata	0000000000000000              .rodata
+000000000040eca0 l    d  .eh_frame_hdr	0000000000000000              .eh_frame_hdr
+000000000040f318 l    d  .eh_frame	0000000000000000              .eh_frame
+0000000000410ecc l    d  .gcc_except_table	0000000000000000              .gcc_except_table
+0000000000611dc8 l    d  .init_array	0000000000000000              .init_array
+0000000000611df8 l    d  .fini_array	0000000000000000              .fini_array
+0000000000611e00 l    d  .jcr	0000000000000000              .jcr
+0000000000611e08 l    d  .dynamic	0000000000000000              .dynamic
+0000000000611ff8 l    d  .got	0000000000000000              .got
+0000000000612000 l    d  .got.plt	0000000000000000              .got.plt
+0000000000612300 l    d  .data	0000000000000000              .data
+0000000000612320 l    d  .bss	0000000000000000              .bss
+0000000000000000 l    d  .comment	0000000000000000              .comment
+0000000000000000 l    d  .debug_aranges	0000000000000000              .debug_aranges
+0000000000000000 l    d  .debug_info	0000000000000000              .debug_info
+0000000000000000 l    d  .debug_abbrev	0000000000000000              .debug_abbrev
+0000000000000000 l    d  .debug_line	0000000000000000              .debug_line
+0000000000000000 l    d  .debug_str	0000000000000000              .debug_str
+0000000000000000 l    d  .debug_ranges	0000000000000000              .debug_ranges
+0000000000000000 l    df *ABS*	0000000000000000              crtstuff.c
+0000000000611e00 l     O .jcr	0000000000000000              __JCR_LIST__
+0000000000409730 l     F .text	0000000000000000              deregister_tm_clones
+0000000000409760 l     F .text	0000000000000000              register_tm_clones
+00000000004097a0 l     F .text	0000000000000000              __do_global_dtors_aux
+0000000000612690 l     O .bss	0000000000000001              completed.6973
+0000000000611df8 l     O .fini_array	0000000000000000              __do_global_dtors_aux_fini_array_entry
+00000000004097c0 l     F .text	0000000000000000              frame_dummy
+0000000000611dc8 l     O .init_array	0000000000000000              __frame_dummy_init_array_entry
+0000000000000000 l    df *ABS*	0000000000000000              main.cpp
+000000000040e768 l     O .rodata	0000000000000001              _ZStL19piecewise_construct
+0000000000612691 l     O .bss	0000000000000001              _ZStL8__ioinit
+000000000040e769 l     O .rodata	0000000000000001              _ZStL13allocator_arg
+000000000040e76a l     O .rodata	0000000000000001              _ZStL6ignore
+0000000000409835 l     F .text	000000000000003d              _Z41__static_initialization_and_destruction_0ii
+000000000040e784 l     O .rodata	0000000000000004              _ZN9__gnu_cxxL21__default_lock_policyE
+0000000000409872 l     F .text	0000000000000015              _GLOBAL__sub_I_main
+000000000040e788 l     O .rodata	0000000000000008              _ZZL18__gthread_active_pvE20__gthread_active_ptr
+0000000000000000 l    df *ABS*	0000000000000000              DirectoryInfo.cpp
+000000000040e790 l     O .rodata	0000000000000001              _ZStL19piecewise_construct
+000000000040e791 l     O .rodata	0000000000000001              _ZStL13allocator_arg
+000000000040e792 l     O .rodata	0000000000000001              _ZStL6ignore
+0000000000612692 l     O .bss	0000000000000001              _ZStL8__ioinit
+000000000040a5de l     F .text	000000000000003d              _Z41__static_initialization_and_destruction_0ii
+000000000040e8d8 l     O .rodata	0000000000000004              _ZN9__gnu_cxxL21__default_lock_policyE
+000000000040a61b l     F .text	0000000000000015              _GLOBAL__sub_I__ZN6System2IO13DirectoryInfoC2ERKSs
+000000000040e8e0 l     O .rodata	0000000000000008              _ZZL18__gthread_active_pvE20__gthread_active_ptr
+0000000000000000 l    df *ABS*	0000000000000000              Information.cpp
+000000000040e8e8 l     O .rodata	0000000000000001              _ZStL19piecewise_construct
+0000000000612693 l     O .bss	0000000000000001              _ZStL8__ioinit
+000000000040c93a l     F .text	000000000000003d              _Z41__static_initialization_and_destruction_0ii
+000000000040c977 l     F .text	0000000000000015              _GLOBAL__sub_I__ZN6System11InformationC2Ev
+000000000040e9a8 l     O .rodata	0000000000000008              _ZZL18__gthread_active_pvE20__gthread_active_ptr
+0000000000000000 l    df *ABS*	0000000000000000              Module.cpp
+000000000040e9b0 l     O .rodata	0000000000000001              _ZStL19piecewise_construct
+0000000000612694 l     O .bss	0000000000000001              _ZStL8__ioinit
+000000000040d18a l     F .text	000000000000003d              _Z41__static_initialization_and_destruction_0ii
+000000000040d1c7 l     F .text	0000000000000015              _GLOBAL__sub_I__ZN6System6ModuleC2Ev
+000000000040ea40 l     O .rodata	0000000000000008              _ZZL18__gthread_active_pvE20__gthread_active_ptr
+0000000000000000 l    df *ABS*	0000000000000000              Process.cpp
+000000000040ea48 l     O .rodata	0000000000000001              _ZStL19piecewise_construct
+0000000000612695 l     O .bss	0000000000000001              _ZStL8__ioinit
+000000000040e5cb l     F .text	000000000000003d              _Z41__static_initialization_and_destruction_0ii
+000000000040e608 l     F .text	0000000000000015              _GLOBAL__sub_I__ZN6System7ProcessC2Ei
+000000000040ec98 l     O .rodata	0000000000000008              _ZZL18__gthread_active_pvE20__gthread_active_ptr
+0000000000000000 l    df *ABS*	0000000000000000              crtstuff.c
+0000000000410ec8 l     O .eh_frame	0000000000000000              __FRAME_END__
+0000000000611e00 l     O .jcr	0000000000000000              __JCR_END__
+0000000000000000 l    df *ABS*	0000000000000000              
+000000000040e740 l     F .text	000000000000000f              __fstat
+0000000000612000 l     O .got.plt	0000000000000000              _GLOBAL_OFFSET_TABLE_
+0000000000612310 l     O .data	0000000000000000              __TMC_END__
+0000000000612308 l     O .data	0000000000000000              __dso_handle
+0000000000611df8 l       .init_array	0000000000000000              __init_array_end
+000000000040e740 l     F .text	000000000000000f              fstat
+0000000000611dc8 l       .init_array	0000000000000000              __init_array_start
+0000000000611e08 l     O .dynamic	0000000000000000              _DYNAMIC
+000000000040af16  w    F .text	00000000000001ea              _ZNSt6vectorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EE19_M_emplace_back_auxIJS6_EEEvDpOT_
+0000000000612300  w      .data	0000000000000000              data_start
+0000000000612320 g     O .bss	0000000000000118              _ZSt3cin@@GLIBCXX_3.4
+000000000040baac  w    F .text	00000000000000c9              _ZNKSt6vectorISsSaISsEE12_M_check_lenEmPKc
+000000000040b134  w    F .text	000000000000004f              _ZNSt12_Vector_baseISsSaISsEED2Ev
+000000000040db66 g     F .text	000000000000004f              _ZN6System7Process11charToStateEc
+000000000040b100  w    F .text	000000000000001a              _ZNSt12_Vector_baseISsSaISsEE12_Vector_implD1Ev
+0000000000000000       F *UND*	0000000000000000              _ZNSs6appendEPKcm@@GLIBCXX_3.4
+000000000040b54c  w    F .text	000000000000003d              _ZNSt12_Vector_baseISsSaISsEE12_Vector_implC2Ev
+000000000040b100  w    F .text	000000000000001a              _ZNSt12_Vector_baseISsSaISsEE12_Vector_implD2Ev
+0000000000000000       F *UND*	0000000000000000              _ZSt20__throw_length_errorPKc@@GLIBCXX_3.4
+0000000000000000       F *UND*	0000000000000000              _ZNSsaSEPKc@@GLIBCXX_3.4
+000000000040a9da  w    F .text	0000000000000052              _ZNSt11_Tuple_implILm0EIPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC2IS3_IS5_EvEEOT_DpOT0_
+0000000000000000       F *UND*	0000000000000000              _ZNSsC1Ev@@GLIBCXX_3.4
+000000000040bd98  w    F .text	0000000000000022              _ZNKSt6vectorISsSaISsEE8max_sizeEv
+000000000040b24b  w    F .text	000000000000000e              _ZNSt10_Head_baseILm0EPN6System2IO13DirectoryInfoELb0EE7_M_headERKS4_
+000000000040ae12  w    F .text	000000000000001a              _ZNSt12_Vector_baseISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EEC2Ev
+0000000000000000       F *UND*	0000000000000000              _ZNSt14basic_ifstreamIcSt11char_traitsIcEE5closeEv@@GLIBCXX_3.4
+000000000040b1ca  w    F .text	0000000000000081              _ZNSt6vectorISsSaISsEE12emplace_backIISsEEEvDpOT_
+0000000000000000       F *UND*	0000000000000000              execv@@GLIBC_2.2.5
+000000000040b89e  w    F .text	000000000000004c              _ZN9__gnu_cxx13new_allocatorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS4_EEE9constructIS7_JS7_EEEvPT_DpOT0_
+0000000000000000       F *UND*	0000000000000000              _ZNSolsEi@@GLIBCXX_3.4
+000000000040b5fd  w    F .text	0000000000000038              _ZNSt16allocator_traitsISaISsEE9constructISsJSsEEEDTcl12_S_constructfp_fp0_spcl7forwardIT0_Efp1_EEERS0_PT_DpOS3_
+000000000040ac0a  w    F .text	0000000000000081              _ZNSt6vectorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EE12emplace_backIJS6_EEEvDpOT_
+000000000040a8c4  w    F .text	0000000000000029              _ZNSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS2_EEC2EPS2_
+000000000040e730 g     F .text	0000000000000002              __libc_csu_fini
+000000000040c35c g     F .text	000000000000006b              _ZN6System11Information11getUserNameEv
+000000000040bd24  w    F .text	000000000000000e              _ZSt11__addressofISsEPT_RS0_
+0000000000409700 g     F .text	0000000000000000              _start
+000000000040aace  w    F .text	000000000000001a              _ZNSt6vectorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EEC1Ev
+000000000040b866  w    F .text	0000000000000037              _ZNSt12_Destroy_auxILb0EE9__destroyIPSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS5_EEEEvT_SA_
+0000000000000000       F *UND*	0000000000000000              _ZNKSs6substrEmm@@GLIBCXX_3.4
+000000000040dccc g     F .text	0000000000000116              _ZN6System7Process5pauseEv
+000000000040bcb6  w    F .text	0000000000000019              _ZNSt13move_iteratorIPSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEC1ES7_
+0000000000000000       F *UND*	0000000000000000              getlogin@@GLIBC_2.2.5
+000000000040c006  w    F .text	0000000000000020              _ZNSt13move_iteratorIPSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEppEv
+000000000040bd4c  w    F .text	000000000000004c              _ZN9__gnu_cxx13new_allocatorISsE9constructISsJSsEEEvPT_DpOT0_
+000000000040bf3e  w    F .text	000000000000001a              _ZNSt16allocator_traitsISaISsEE8max_sizeERKS0_
+000000000040b1bb  w    F .text	000000000000000e              _ZSt7forwardISsEOT_RNSt16remove_referenceIS0_E4typeE
+000000000040b58a  w    F .text	000000000000001a              _ZNSaISsED1Ev
+000000000040b352  w    F .text	0000000000000025              _ZSt8_DestroyIPSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEvT_S8_
+000000000040a826  w    F .text	0000000000000052              _ZNSt11_Tuple_implILm0EJPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC2IRS3_JS5_EvEEOT_DpOT0_
+0000000000000000       F *UND*	0000000000000000              _ZSt7getlineIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RSbIS4_S5_T1_E@@GLIBCXX_3.4
+000000000040b820  w    F .text	000000000000001a              _ZNSaISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC2Ev
+000000000040a915  w    F .text	000000000000001a              _ZSt12__get_helperILm0EPN6System2IO13DirectoryInfoEJSt14default_deleteIS2_EEENSt9__add_refIT0_E4typeERSt11_Tuple_implIXT_EJS7_DpT1_EE
+000000000040b31e  w    F .text	0000000000000034              _ZNSt12_Vector_baseISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EE13_M_deallocateEPS6_m
+0000000000000000  w      *UND*	0000000000000000              __gmon_start__
+0000000000000000  w      *UND*	0000000000000000              _Jv_RegisterClasses
+0000000000000000       F *UND*	0000000000000000              _ZNKSs5c_strEv@@GLIBCXX_3.4
+0000000000000000       F *UND*	0000000000000000              _Znam@@GLIBCXX_3.4
+0000000000000000       F *UND*	0000000000000000              uname@@GLIBC_2.2.5
+000000000040b5fd  w    F .text	0000000000000038              _ZNSt16allocator_traitsISaISsEE9constructISsISsEEEDTcl12_S_constructfp_fp0_spcl7forwardIT0_Efp1_EEERS0_PT_DpOS3_
+000000000040ad42  w    F .text	000000000000001a              _ZSt12__get_helperILm1ESt14default_deleteIN6System2IO13DirectoryInfoEEJEENSt9__add_refIT0_E4typeERSt11_Tuple_implIXT_EJS6_DpT1_EE
+0000000000000000       F *UND*	0000000000000000              _ZdlPv@@GLIBCXX_3.4
+0000000000000000       F *UND*	0000000000000000              _ZNSs7reserveEm@@GLIBCXX_3.4
+000000000040bc22  w    F .text	0000000000000025              _ZNSt16allocator_traitsISaISsEE7destroyISsEEvRS0_PT_
+000000000040b11a  w    F .text	000000000000001a              _ZNSt12_Vector_baseISsSaISsEEC1Ev
+000000000040bc48  w    F .text	000000000000000a              _ZN9__gnu_cxx13new_allocatorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS4_EEEC1Ev
+000000000040b192  w    F .text	0000000000000029              _ZSt8_DestroyIPSsSsEvT_S1_RSaIT0_E
+000000000040cd72  w    F .text	000000000000003a              _ZSt8distanceIPcENSt15iterator_traitsIT_E15difference_typeES2_S2_
+000000000040c3c8 g     F .text	00000000000002ea              _ZN6System11Information16getExecutionPathEv
+000000000040a9da  w    F .text	0000000000000052              _ZNSt11_Tuple_implILm0EIPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC1IS3_IS5_EvEEOT_DpOT0_
+000000000040cbb6  w    F .text	0000000000000031              _ZNSs16_S_construct_auxIPcEES0_T_S1_RKSaIcESt12__false_type
+000000000040cdec g     F .text	000000000000001a              _ZN6System6ModuleD2Ev
+000000000040ae12  w    F .text	000000000000001a              _ZNSt12_Vector_baseISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EEC1Ev
+000000000040e750 g     F .fini	0000000000000000              _fini
+0000000000000000       F *UND*	0000000000000000              __cxa_rethrow@@CXXABI_1.3
+000000000040bf93  w    F .text	000000000000002d              _ZSt18uninitialized_copyISt13move_iteratorIPSsES1_ET0_T_S4_S3_
+000000000040d054 g     F .text	0000000000000136              _ZN6System6Module6unloadERKSs
+000000000040a77d  w    F .text	000000000000000e              _ZSt7forwardIRPN6System2IO13DirectoryInfoEEOT_RNSt16remove_referenceIS5_E4typeE
+0000000000000000       F *UND*	0000000000000000              _ZNKSs4sizeEv@@GLIBCXX_3.4
+000000000040ba10  w    F .text	000000000000000a              _ZN9__gnu_cxx13new_allocatorISsED1Ev
+0000000000000000       F *UND*	0000000000000000              _ZNSt8ios_base4InitC1Ev@@GLIBCXX_3.4
+000000000040b184  w    F .text	000000000000000e              _ZNSt12_Vector_baseISsSaISsEE19_M_get_Tp_allocatorEv
+000000000040ae2c  w    F .text	000000000000004f              _ZNSt12_Vector_baseISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EED2Ev
+000000000040bd32  w    F .text	000000000000001a              _ZSt8_DestroyISsEvPT_
+000000000040ad76  w    F .text	000000000000001a              _ZNSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS2_EE11get_deleterEv
+0000000000000000       F *UND*	0000000000000000              execl@@GLIBC_2.2.5
+0000000000612440 g     O .bss	0000000000000110              _ZSt4cerr@@GLIBCXX_3.4
+0000000000000000       F *UND*	0000000000000000              _ZNSs4_Rep10_M_refdataEv@@GLIBCXX_3.4
+000000000040cbe8  w    F .text	0000000000000165              _ZNSs12_S_constructIPcEES0_T_S1_RKSaIcESt20forward_iterator_tag
+000000000040aeb3  w    F .text	000000000000002a              _ZSteqIcSt11char_traitsIcESaIcEEbRKSbIT_T0_T1_EPKS3_
+000000000040ac8c  w    F .text	000000000000001a              _ZNSt6vectorISsSaISsEEC2Ev
+0000000000000000       F *UND*	0000000000000000              __libc_start_main@@GLIBC_2.2.5
+000000000040b97a  w    F .text	0000000000000025              _ZSt32__make_move_if_noexcept_iteratorIPSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESt13move_iteratorIS7_EET0_T_
+000000000040bf58  w    F .text	000000000000000e              _ZNKSt12_Vector_baseISsSaISsEE19_M_get_Tp_allocatorEv
+000000000040a66e  w    F .text	0000000000000014              _ZStorSt13_Ios_OpenmodeS_
+000000000040ba73  w    F .text	0000000000000038              _ZNSt16allocator_traitsISaISsEE12_S_constructISsJSsEEENSt9enable_ifIXsrNS1_18__construct_helperIT_JDpT0_EEE5valueEvE4typeERS0_PS5_DpOS6_
+000000000040ac8c  w    F .text	000000000000001a              _ZNSt6vectorISsSaISsEEC1Ev
+000000000040b259  w    F .text	000000000000001a              _ZNSt11_Tuple_implILm0EJPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEE7_M_headERKS6_
+000000000040aae8  w    F .text	0000000000000043              _ZNSt6vectorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EED2Ev
+000000000040a878  w    F .text	000000000000004c              _ZNSt5tupleIIPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC2IRS3_S5_vEEOT_OT0_
+0000000000000000       F *UND*	0000000000000000              rmdir@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              _ZNSs4_Rep9_S_createEmmRKSaIcE@@GLIBCXX_3.4
+000000000040c1ff  w    F .text	0000000000000048              _ZSt10_ConstructISsJSsEEvPT_DpOT0_
+0000000000000000       F *UND*	0000000000000000              _ZNSsC1ERKSs@@GLIBCXX_3.4
+000000000040a9b2  w    F .text	0000000000000028              _ZNSt10_Head_baseILm0EPN6System2IO13DirectoryInfoELb0EEC1IS3_EEOT_
+0000000000000000       F *UND*	0000000000000000              __cxa_atexit@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              _ZNSt13runtime_errorC1ERKSs@@GLIBCXX_3.4
+000000000040c160  w    F .text	0000000000000039              _ZSteqIPSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEbRKSt13move_iteratorIT_ESC_
+000000000040a630  w    F .text	0000000000000012              _ZnwmPv
+000000000040b5a4  w    F .text	0000000000000034              _ZNSt12_Vector_baseISsSaISsEE13_M_deallocateEPSsm
+0000000000000000       F *UND*	0000000000000000              _ZNSs13_S_copy_charsEPcS_S_@@GLIBCXX_3.4
+000000000040d5b2 g     F .text	000000000000006e              _ZN6System7ProcessD2Ev
+000000000040e630  w    F .text	0000000000000011              _ZNKSt16initializer_listISsE5beginEv
+000000000040a94a  w    F .text	0000000000000059              _ZNSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS2_EED1Ev
+000000000040a79a  w    F .text	000000000000000a              _ZNSt11_Tuple_implILm2EIEEC1Ev
+0000000000000000       F *UND*	0000000000000000              getpid@@GLIBC_2.2.5
+000000000040c248  w    F .text	0000000000000011              _ZNKSt13move_iteratorIPSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEE4baseEv
+000000000040e678  w    F .text	0000000000000047              _ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EOS6_PKS3_
+000000000040bcfc  w    F .text	000000000000001e              _ZN9__gnu_cxx13new_allocatorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS4_EEE7destroyIS7_EEvPT_
+000000000040ad28  w    F .text	000000000000001a              _ZNSt11_Tuple_implILm1EJSt14default_deleteIN6System2IO13DirectoryInfoEEEE7_M_headERS5_
+000000000040aa2c  w    F .text	000000000000004c              _ZNSt5tupleIJPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC2IS3_S5_vEEOT_OT0_
+0000000000409300       F *UND*	0000000000000000              _ZNSt8ios_base4InitD1Ev@@GLIBCXX_3.4
+000000000040b9d0  w    F .text	0000000000000025              _ZNSt16allocator_traitsISaISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEE10_S_destroyIS6_EENSt9enable_ifIXsrNS8_16__destroy_helperIT_EE5valueEvE4typeERS7_PSC_
+0000000000000000  w      *UND*	0000000000000000              _ITM_deregisterTMCloneTable
+000000000040a7a4  w    F .text	000000000000001e              _ZNSt10_Head_baseILm1ESt14default_deleteIN6System2IO13DirectoryInfoEELb1EEC2IS4_EEOT_
+0000000000000000       F *UND*	0000000000000000              _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@@GLIBCXX_3.4
+0000000000000000       F *UND*	0000000000000000              geteuid@@GLIBC_2.2.5
+0000000000409e54 g     F .text	0000000000000167              _ZN6System2IO13DirectoryInfo9deleteDirEv
+000000000040ab53  w    F .text	0000000000000062              _ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ERKS6_PKS3_
+000000000040cdd2 g     F .text	000000000000001a              _ZN6System6ModuleC1Ev
+000000000040bb76  w    F .text	0000000000000038              _ZNSt12_Vector_baseISsSaISsEE11_M_allocateEm
+000000000040b844  w    F .text	0000000000000022              _ZN9__gnu_cxx13new_allocatorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS4_EEE10deallocateEPS7_m
+000000000040c099  w    F .text	000000000000001a              _ZNSt16allocator_traitsISaISsEE11_S_max_sizeIKS0_EENSt9enable_ifIXsrNS1_16__maxsize_helperIT_EE5valueEmE4typeERS6_
+000000000040e760 g     O .rodata	0000000000000004              _IO_stdin_used
+000000000040a9b2  w    F .text	0000000000000028              _ZNSt10_Head_baseILm0EPN6System2IO13DirectoryInfoELb0EEC2IS3_EEOT_
+0000000000409c34 g     F .text	000000000000004c              _ZN6System2IO13DirectoryInfo4openERKSs
+0000000000000000       F *UND*	0000000000000000              _ZNSsD1Ev@@GLIBCXX_3.4
+000000000040c051  w    F .text	0000000000000048              _ZSt10_ConstructISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEIS6_EEvPT_DpOT0_
+000000000040a79a  w    F .text	000000000000000a              _ZNSt11_Tuple_implILm2EJEEC2Ev
+000000000040e110 g     F .text	00000000000004bb              _ZN6System7Process5startERKSsRKSt16initializer_listISsE
+000000000040b54c  w    F .text	000000000000003d              _ZNSt12_Vector_baseISsSaISsEE12_Vector_implC1Ev
+000000000040bd1a  w    F .text	000000000000000a              _ZN9__gnu_cxx13new_allocatorISsEC1Ev
+000000000040a92f  w    F .text	000000000000001a              _ZSt3getILm0EJPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEENSt9__add_refINSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEE4typeERSB_
+0000000000409a82 g     F .text	000000000000002a              _ZN6System2IO13DirectoryInfoD1Ev
+000000000040ba10  w    F .text	000000000000000a              _ZN9__gnu_cxx13new_allocatorISsED2Ev
+000000000040bf7a  w    F .text	0000000000000019              _ZNSt13move_iteratorIPSsEC2ES0_
+000000000040a7fe  w    F .text	0000000000000028              _ZNSt10_Head_baseILm0EPN6System2IO13DirectoryInfoELb0EEC2IRS3_EEOT_
+000000000040b3b0  w    F .text	00000000000000c9              _ZNKSt6vectorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EE12_M_check_lenEmPKc
+000000000040e642  w    F .text	0000000000000036              _ZNKSt16initializer_listISsE3endEv
+0000000000000000  w      *UND*	0000000000000000              _ITM_registerTMCloneTable
+0000000000612300 g       .data	0000000000000000              __data_start
+0000000000000000       F *UND*	0000000000000000              _ZNSs4_Rep10_M_destroyERKSaIcE@@GLIBCXX_3.4
+000000000040ad5c  w    F .text	000000000000001a              _ZSt3getILm1EJPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEENSt9__add_refINSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEE4typeERSB_
+000000000040b2c6  w    F .text	000000000000003d              _ZNSt12_Vector_baseISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EE12_Vector_implC1Ev
+000000000040adf8  w    F .text	000000000000001a              _ZNSt12_Vector_baseISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EE12_Vector_implD2Ev
+000000000040b83a  w    F .text	000000000000000a              _ZN9__gnu_cxx13new_allocatorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS4_EEED2Ev
+0000000000000000       F *UND*	0000000000000000              opendir@@GLIBC_2.2.5
+000000000040c2a4 g     F .text	00000000000000b7              _ZN6System11InformationC1Ev
+0000000000000000       F *UND*	0000000000000000              _ZNKSs12find_last_ofEPKcm@@GLIBCXX_3.4
+000000000040e61e  w    F .text	0000000000000012              _ZNKSt16initializer_listISsE4sizeEv
+000000000040b526  w    F .text	0000000000000025              _ZNSt16allocator_traitsISaISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEE7destroyIS6_EEvRS7_PT_
+000000000040a826  w    F .text	0000000000000052              _ZNSt11_Tuple_implILm0EIPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC1IRS3_IS5_EvEEOT_DpOT0_
+000000000040bfc0  w    F .text	000000000000001e              _ZN9__gnu_cxx13new_allocatorISsE7destroyISsEEvPT_
+000000000040adc2  w    F .text	0000000000000035              _ZNSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS2_EE7releaseEv
+000000000040bdba  w    F .text	0000000000000042              _ZN9__gnu_cxx13new_allocatorISsE8allocateEmPKv
+0000000000000000       F *UND*	0000000000000000              readdir@@GLIBC_2.2.5
+000000000040c1ff  w    F .text	0000000000000048              _ZSt10_ConstructISsISsEEvPT_DpOT0_
+0000000000000000       F *UND*	0000000000000000              _ZNSs6insertEmPKc@@GLIBCXX_3.4
+000000000040ad5c  w    F .text	000000000000001a              _ZSt3getILm1EIPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEENSt9__add_refINSt13tuple_elementIXT_ESt5tupleIIDpT0_EEE4typeEE4typeERSB_
+000000000040acea  w    F .text	0000000000000030              _ZNSt6vectorISsSaISsEE9push_backEOSs
+000000000040a92f  w    F .text	000000000000001a              _ZSt3getILm0EIPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEENSt9__add_refINSt13tuple_elementIXT_ESt5tupleIIDpT0_EEE4typeEE4typeERSB_
+000000000040b4d8  w    F .text	000000000000004e              _ZSt34__uninitialized_move_if_noexcept_aIPSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EES7_SaIS6_EET0_T_SA_S9_RT1_
+000000000040c292  w    F .text	0000000000000011              _ZNKSt13move_iteratorIPSsE4baseEv
+0000000000409fbc g     F .text	000000000000016b              _ZN6System2IO13DirectoryInfo9deleteDirERKSs
+000000000040c1c2  w    F .text	0000000000000020              _ZNSt13move_iteratorIPSsEppEv
+000000000040a78b  w    F .text	000000000000000e              _ZSt7forwardISt14default_deleteIN6System2IO13DirectoryInfoEEEOT_RNSt16remove_referenceIS5_E4typeE
+000000000040c6b2 g     F .text	00000000000001e6              _ZN6System11Information13getSystemInfoEv
+0000000000000000       F *UND*	0000000000000000              syscall@@GLIBC_2.2.5
+000000000040ba3c  w    F .text	0000000000000037              _ZNSt12_Destroy_auxILb0EE9__destroyIPSsEEvT_S3_
+000000000040b636  w    F .text	00000000000001ea              _ZNSt6vectorISsSaISsEE19_M_emplace_back_auxIJSsEEEvDpOT_
+0000000000000000       F *UND*	0000000000000000              sscanf@@GLIBC_2.2.5
+000000000040a642  w    F .text	000000000000002c              _ZNSt11char_traitsIcE6lengthEPKc
+000000000040c2a4 g     F .text	00000000000000b7              _ZN6System11InformationC2Ev
+000000000040ae7c  w    F .text	000000000000000e              _ZNSt12_Vector_baseISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EE19_M_get_Tp_allocatorEv
+0000000000000000       F *UND*	0000000000000000              _ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1Ev@@GLIBCXX_3.4
+000000000040a7a4  w    F .text	000000000000001e              _ZNSt10_Head_baseILm1ESt14default_deleteIN6System2IO13DirectoryInfoEELb1EEC1IS4_EEOT_
+000000000040a8fb  w    F .text	000000000000001a              _ZNSt11_Tuple_implILm0EJPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEE7_M_headERS6_
+000000000040bd4c  w    F .text	000000000000004c              _ZN9__gnu_cxx13new_allocatorISsE9constructISsISsEEEvPT_DpOT0_
+000000000040b58a  w    F .text	000000000000001a              _ZNSaISsED2Ev
+000000000040bc48  w    F .text	000000000000000a              _ZN9__gnu_cxx13new_allocatorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS4_EEEC2Ev
+0000000000000000       F *UND*	0000000000000000              _ZNKSs4findEcm@@GLIBCXX_3.4
+0000000000612550  w    O .bss	0000000000000018              _ZTISt13runtime_error@@GLIBCXX_3.4
+000000000040a726  w    F .text	000000000000000e              _ZSt4moveIRSsEONSt16remove_referenceIT_E4typeEOS2_
+0000000000000000       F *UND*	0000000000000000              _ZNKSs7compareEPKc@@GLIBCXX_3.4
+0000000000000000       F *UND*	0000000000000000              _ZNSsC1EPKcRKSaIcE@@GLIBCXX_3.4
+0000000000000000       F *UND*	0000000000000000              kill@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              strerror@@GLIBC_2.2.5
+000000000040b9f6  w    F .text	000000000000001a              _ZNSaISsEC2Ev
+0000000000000000       F *UND*	0000000000000000              _ZNSsaSEOSs@@GLIBCXX_3.4.14
+000000000040a7c2  w    F .text	000000000000003c              _ZNSt11_Tuple_implILm1EISt14default_deleteIN6System2IO13DirectoryInfoEEEEC2IS4_IEvEEOT_DpOT0_
+0000000000612580 g     O .bss	0000000000000110              _ZSt4cout@@GLIBCXX_3.4
+000000000040ba1a  w    F .text	0000000000000022              _ZN9__gnu_cxx13new_allocatorISsE10deallocateEPSsm
+0000000000000000       F *UND*	0000000000000000              _ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev@@GLIBCXX_3.4
+000000000040cb3e  w    F .text	0000000000000047              _ZNSsC2IPcEET_S1_RKSaIcE
+000000000040bbae  w    F .text	0000000000000026              _ZNKSt6vectorISsSaISsEE4sizeEv
+000000000040def8 g     F .text	0000000000000217              _ZN6System7Process5startERKSs
+000000000040d77c g     F .text	000000000000024c              _ZN6System7Process9getExPathEv
+000000000040a7c2  w    F .text	000000000000003c              _ZNSt11_Tuple_implILm1EJSt14default_deleteIN6System2IO13DirectoryInfoEEEEC1IS4_JEvEEOT_DpOT0_
+000000000040b134  w    F .text	000000000000004f              _ZNSt12_Vector_baseISsSaISsEED1Ev
+000000000040a79a  w    F .text	000000000000000a              _ZNSt11_Tuple_implILm2EJEEC1Ev
+000000000040ad42  w    F .text	000000000000001a              _ZSt12__get_helperILm1ESt14default_deleteIN6System2IO13DirectoryInfoEEIEENSt9__add_refIT0_E4typeERSt11_Tuple_implIXT_EIS6_DpT1_EE
+0000000000000000       F *UND*	0000000000000000              readlink@@GLIBC_2.2.5
+000000000040bf7a  w    F .text	0000000000000019              _ZNSt13move_iteratorIPSsEC1ES0_
+0000000000000000       F *UND*	0000000000000000              dirfd@@GLIBC_2.2.5
+000000000040e6c0 g     F .text	0000000000000065              __libc_csu_init
+0000000000000000       F *UND*	0000000000000000              _ZNSi3getEv@@GLIBCXX_3.4
+0000000000409c80 g     F .text	000000000000005e              _ZN6System2IO13DirectoryInfo5closeEv
+000000000040bdfc  w    F .text	0000000000000025              _ZSt32__make_move_if_noexcept_iteratorIPSsSt13move_iteratorIS0_EET0_T_
+000000000040aca6  w    F .text	0000000000000043              _ZNSt6vectorISsSaISsEED2Ev
+0000000000000000       F *UND*	0000000000000000              _ZNSt18basic_stringstreamIcSt11char_traitsIcESaIcEEC1ESt13_Ios_Openmode@@GLIBCXX_3.4
+000000000040dbb6 g     F .text	0000000000000116              _ZN6System7Process4stopEv
+0000000000409cde g     F .text	0000000000000176              _ZN6System2IO13DirectoryInfo6createERKSsNS0_10PermissionE
+000000000040b1ca  w    F .text	0000000000000081              _ZNSt6vectorISsSaISsEE12emplace_backIJSsEEEvDpOT_
+000000000040ad28  w    F .text	000000000000001a              _ZNSt11_Tuple_implILm1EISt14default_deleteIN6System2IO13DirectoryInfoEEEE7_M_headERS5_
+000000000040a878  w    F .text	000000000000004c              _ZNSt5tupleIIPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC1IRS3_S5_vEEOT_OT0_
+000000000040c98c  w    F .text	000000000000003b              _ZSt9to_stringi
+000000000040ac0a  w    F .text	0000000000000081              _ZNSt6vectorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EE12emplace_backIIS6_EEEvDpOT_
+000000000040a79a  w    F .text	000000000000000a              _ZNSt11_Tuple_implILm2EIEEC2Ev
+000000000040aedd  w    F .text	0000000000000038              _ZNSt16allocator_traitsISaISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEE9constructIS6_IS6_EEEDTcl12_S_constructfp_fp0_spcl7forwardIT0_Efp1_EEERS7_PT_DpOSA_
+000000000040b273  w    F .text	000000000000001a              _ZSt12__get_helperILm0EPN6System2IO13DirectoryInfoEJSt14default_deleteIS2_EEENSt11__add_c_refIT0_E4typeERKSt11_Tuple_implIXT_EJS7_DpT1_EE
+000000000040cd4d  w    F .text	0000000000000013              _ZSteqIcEbRKSaIT_ES3_
+000000000040b28d  w    F .text	000000000000001a              _ZSt3getILm0EIPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEENSt11__add_c_refINSt13tuple_elementIXT_ESt5tupleIIDpT0_EEE4typeEE4typeERKSB_
+000000000040c0b3  w    F .text	00000000000000ad              _ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPSsES3_EET0_T_S6_S5_
+000000000040ae8a  w    F .text	0000000000000029              _ZSt8_DestroyIPSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EES6_EvT_S8_RSaIT0_E
+000000000040b273  w    F .text	000000000000001a              _ZSt12__get_helperILm0EPN6System2IO13DirectoryInfoEISt14default_deleteIS2_EEENSt11__add_c_refIT0_E4typeERKSt11_Tuple_implIXT_EIS7_DpT1_EE
+000000000040bccf  w    F .text	000000000000002d              _ZSt18uninitialized_copyISt13move_iteratorIPSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS4_EEES8_ET0_T_SB_SA_
+000000000040aa2c  w    F .text	000000000000004c              _ZNSt5tupleIIPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC2IS3_S5_vEEOT_OT0_
+000000000040aa2c  w    F .text	000000000000004c              _ZNSt5tupleIIPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC1IS3_S5_vEEOT_OT0_
+000000000040c034  w    F .text	000000000000001d              _ZNKSt13move_iteratorIPSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEdeEv
+000000000040cb3e  w    F .text	0000000000000047              _ZNSsC1IPcEET_S1_RKSaIcE
+000000000040ad90  w    F .text	0000000000000031              _ZNKSt14default_deleteIN6System2IO13DirectoryInfoEEclEPS2_
+0000000000409470       F *UND*	0000000000000000              vsnprintf@@GLIBC_2.2.5
+000000000040d1dc g     F .text	000000000000024a              _ZN6System7ProcessC1Ei
+0000000000000000       F *UND*	0000000000000000              __fxstat@@GLIBC_2.2.5
+000000000040a8c4  w    F .text	0000000000000029              _ZNSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS2_EEC1EPS2_
+000000000040b636  w    F .text	00000000000001ea              _ZNSt6vectorISsSaISsEE19_M_emplace_back_auxIISsEEEvDpOT_
+0000000000000000       F *UND*	0000000000000000              getenv@@GLIBC_2.2.5
+000000000040d620 g     F .text	000000000000015b              _ZN6System7Process8readDataEv
+000000000040bca2  w    F .text	0000000000000014              _ZNK9__gnu_cxx13new_allocatorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS4_EEE8max_sizeEv
+000000000040ba73  w    F .text	0000000000000038              _ZNSt16allocator_traitsISaISsEE12_S_constructISsISsEEENSt9enable_ifIXsrNS1_18__construct_helperIT_IDpT0_EEE5valueEvE4typeERS0_PS5_DpOS6_
+0000000000000000       F *UND*	0000000000000000              __errno_location@@GLIBC_2.2.5
+000000000040cd60  w    F .text	0000000000000012              _ZN9__gnu_cxx17__is_null_pointerIcEEbPT_
+000000000040a826  w    F .text	0000000000000052              _ZNSt11_Tuple_implILm0EIPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC2IRS3_IS5_EvEEOT_DpOT0_
+000000000040abfc  w    F .text	000000000000000e              _ZSt7forwardISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEOT_RNSt16remove_referenceIS7_E4typeE
+0000000000612310 g       .bss	0000000000000000              __bss_start
+000000000040a9da  w    F .text	0000000000000052              _ZNSt11_Tuple_implILm0EJPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC1IS3_JS5_EvEEOT_DpOT0_
+000000000040b304  w    F .text	000000000000001a              _ZNSaISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS2_EEED2Ev
+000000000040c8bc g     F .text	000000000000007e              _ZN6System11Information22getEnvironmentVariableERKSs
+0000000000000000       F *UND*	0000000000000000              _ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKSbIS4_S5_T1_E@@GLIBCXX_3.4
+0000000000000000       F *UND*	0000000000000000              __stack_chk_fail@@GLIBC_2.4
+000000000040bfde  w    F .text	0000000000000028              _ZStneIPSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEbRKSt13move_iteratorIT_ESC_
+000000000040a878  w    F .text	000000000000004c              _ZNSt5tupleIJPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC2IRS3_S5_vEEOT_OT0_
+000000000040a682  w    F .text	00000000000000a4              _ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
+000000000040bf66  w    F .text	0000000000000014              _ZNK9__gnu_cxx13new_allocatorISsE8max_sizeEv
+0000000000409a82 g     F .text	000000000000002a              _ZN6System2IO13DirectoryInfoD2Ev
+000000000040bc52  w    F .text	000000000000000e              _ZSt11__addressofISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEPT_RS7_
+000000000040d9c8 g     F .text	000000000000019e              _ZN6System7Process6getCmdEv
+0000000000000000       F *UND*	0000000000000000              __cxa_allocate_exception@@CXXABI_1.3
+0000000000000000       F *UND*	0000000000000000              _ZNSaIcED1Ev@@GLIBCXX_3.4
+000000000040a8ed  w    F .text	000000000000000e              _ZNSt10_Head_baseILm0EPN6System2IO13DirectoryInfoELb0EE7_M_headERS4_
+0000000000409888 g     F .text	00000000000001f9              _ZN6System2IO13DirectoryInfoC2ERKSs
+000000000040dde2 g     F .text	0000000000000116              _ZN6System7Process6resumeEv
+000000000040cdb6  w    F .text	000000000000001c              _ZSt10__distanceIPcENSt15iterator_traitsIT_E15difference_typeES2_S2_St26random_access_iterator_tag
+000000000040bc94  w    F .text	000000000000000e              _ZNKSt12_Vector_baseISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EE19_M_get_Tp_allocatorEv
+0000000000000000       F *UND*	0000000000000000              __cxa_free_exception@@CXXABI_1.3
+000000000040b259  w    F .text	000000000000001a              _ZNSt11_Tuple_implILm0EIPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEE7_M_headERKS6_
+000000000040c199  w    F .text	0000000000000028              _ZStneIPSsEbRKSt13move_iteratorIT_ES5_
+0000000000000000  w      *UND*	0000000000000000              __pthread_key_create
+000000000040d426 g     F .text	000000000000018c              _ZN6System7ProcessC1ERKS0_
+000000000040c051  w    F .text	0000000000000048              _ZSt10_ConstructISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEJS6_EEvPT_DpOT0_
+000000000040b377  w    F .text	0000000000000038              _ZNSt16allocator_traitsISaISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEE12_S_constructIS6_IS6_EEENSt9enable_ifIXsrNS8_18__construct_helperIT_IDpT0_EEE5valueEvE4typeERS7_PSC_DpOSD_
+0000000000000000       F *UND*	0000000000000000              getuid@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              _ZSt19__throw_logic_errorPKc@@GLIBCXX_3.4
+000000000040b938  w    F .text	0000000000000042              _ZN9__gnu_cxx13new_allocatorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS4_EEE8allocateEmPKv
+000000000040b8ea  w    F .text	0000000000000022              _ZNKSt6vectorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EE8max_sizeEv
+000000000040c026  w    F .text	000000000000000e              _ZSt4moveIRSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEONSt16remove_referenceIT_E4typeEOS9_
+000000000040b90c  w    F .text	000000000000002b              _ZSt3maxImERKT_S2_S2_
+0000000000409520       F *UND*	0000000000000000              _ZNSt13runtime_errorD1Ev@@GLIBCXX_3.4
+0000000000000000       F *UND*	0000000000000000              _ZdaPv@@GLIBCXX_3.4
+000000000040a128 g     F .text	00000000000001f0              _ZN6System2IO13DirectoryInfo14getDirectoriesEv
+000000000040ae2c  w    F .text	000000000000004f              _ZNSt12_Vector_baseISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EED1Ev
+000000000040be52  w    F .text	0000000000000025              _ZNSt16allocator_traitsISaISsEE10_S_destroyISsEENSt9enable_ifIXsrNS1_16__destroy_helperIT_EE5valueEvE4typeERS0_PS5_
+0000000000000000       F *UND*	0000000000000000              _ZNSs6appendEPKc@@GLIBCXX_3.4
+000000000040aedd  w    F .text	0000000000000038              _ZNSt16allocator_traitsISaISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEE9constructIS6_JS6_EEEDTcl12_S_constructfp_fp0_spcl7forwardIT0_Efp1_EEERS7_PT_DpOSA_
+000000000040aa78  w    F .text	0000000000000055              _ZNSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS2_EEC2EOS5_
+000000000040c259  w    F .text	0000000000000039              _ZSteqIPSsEbRKSt13move_iteratorIT_ES5_
+0000000000000000       F *UND*	0000000000000000              __cxa_throw@@CXXABI_1.3
+0000000000612698 g       .bss	0000000000000000              _end
+0000000000000000       F *UND*	0000000000000000              _ZNSolsEPFRSoS_E@@GLIBCXX_3.4
+000000000040d426 g     F .text	000000000000018c              _ZN6System7ProcessC2ERKS0_
+000000000040a94a  w    F .text	0000000000000059              _ZNSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS2_EED2Ev
+000000000040d5b2 g     F .text	000000000000006e              _ZN6System7ProcessD1Ev
+000000000040a318 g     F .text	00000000000000e6              _ZN6System2IO13DirectoryInfo12getFileNamesEv
+0000000000000000       F *UND*	0000000000000000              __cxa_end_catch@@CXXABI_1.3
+000000000040adf8  w    F .text	000000000000001a              _ZNSt12_Vector_baseISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EE12_Vector_implD1Ev
+0000000000000000       F *UND*	0000000000000000              _ZSt17__throw_bad_allocv@@GLIBCXX_3.4
+000000000040a8fb  w    F .text	000000000000001a              _ZNSt11_Tuple_implILm0EIPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEE7_M_headERS6_
+000000000040be91  w    F .text	00000000000000ad              _ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS6_EEESA_EET0_T_SD_SC_
+0000000000000000       F *UND*	0000000000000000              closedir@@GLIBC_2.2.5
+000000000040cdd2 g     F .text	000000000000001a              _ZN6System6ModuleC2Ev
+000000000040cdec g     F .text	000000000000001a              _ZN6System6ModuleD1Ev
+000000000040ce06 g     F .text	000000000000024e              _ZN6System6Module4loadERKSsS2_
+000000000040be21  w    F .text	0000000000000031              _ZSt22__uninitialized_copy_aISt13move_iteratorIPSsES1_SsET0_T_S4_S3_RSaIT1_E
+000000000040ad1a  w    F .text	000000000000000e              _ZNSt10_Head_baseILm1ESt14default_deleteIN6System2IO13DirectoryInfoEELb1EE7_M_headERS5_
+0000000000000000       F *UND*	0000000000000000              access@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              fork@@GLIBC_2.2.5
+00000000004095c0       F *UND*	0000000000000000              _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@@GLIBCXX_3.4
+000000000040bc60  w    F .text	000000000000001a              _ZSt8_DestroyISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEvPT_
+0000000000000000       F *UND*	0000000000000000              __cxa_begin_catch@@CXXABI_1.3
+0000000000000000       F *UND*	0000000000000000              _ZNSt18basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev@@GLIBCXX_3.4
+000000000040a594 g     F .text	000000000000004a              _ZN6System2IO13DirectoryInfo6ExistsERKSs
+000000000040a878  w    F .text	000000000000004c              _ZNSt5tupleIJPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC1IRS3_S5_vEEOT_OT0_
+000000000040b28d  w    F .text	000000000000001a              _ZSt3getILm0EJPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEENSt11__add_c_refINSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeEE4typeERKSB_
+000000000040aca6  w    F .text	0000000000000043              _ZNSt6vectorISsSaISsEED1Ev
+000000000040cb85  w    F .text	0000000000000031              _ZNSs12_S_constructIPcEES0_T_S1_RKSaIcE
+000000000040c1e2  w    F .text	000000000000001d              _ZNKSt13move_iteratorIPSsEdeEv
+000000000040aa2c  w    F .text	000000000000004c              _ZNSt5tupleIJPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC1IS3_S5_vEEOT_OT0_
+0000000000612310 g       .data	0000000000000000              _edata
+000000000040a3fe g     F .text	0000000000000196              _ZN6System2IO13DirectoryInfo19ConvertToTimeStringEl
+000000000040af16  w    F .text	00000000000001ea              _ZNSt6vectorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EE19_M_emplace_back_auxIIS6_EEEvDpOT_
+0000000000000000       F *UND*	0000000000000000              _ZNSaIcEC1Ev@@GLIBCXX_3.4
+000000000040b4b2  w    F .text	0000000000000026              _ZNKSt6vectorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EE4sizeEv
+000000000040a7fe  w    F .text	0000000000000028              _ZNSt10_Head_baseILm0EPN6System2IO13DirectoryInfoELb0EEC1IRS3_EEOT_
+0000000000409600       F *UND*	0000000000000000              __gxx_personality_v0@@CXXABI_1.3
+000000000040a7c2  w    F .text	000000000000003c              _ZNSt11_Tuple_implILm1EJSt14default_deleteIN6System2IO13DirectoryInfoEEEEC2IS4_JEvEEOT_DpOT0_
+000000000040aa78  w    F .text	0000000000000055              _ZNSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS2_EEC1EOS5_
+0000000000000000       F *UND*	0000000000000000              _ZNSsC1EOSs@@GLIBCXX_3.4.14
+0000000000000000       F *UND*	0000000000000000              _ZNSt14basic_ifstreamIcSt11char_traitsIcEE4openERKSsSt13_Ios_Openmode@@GLIBCXX_3.4.13
+0000000000000000       F *UND*	0000000000000000              _ZNSs12_Alloc_hiderC1EPcRKSaIcE@@GLIBCXX_3.4
+0000000000000000       F *UND*	0000000000000000              localtime@@GLIBC_2.2.5
+000000000040a9da  w    F .text	0000000000000052              _ZNSt11_Tuple_implILm0EJPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC2IS3_JS5_EvEEOT_DpOT0_
+000000000040b377  w    F .text	0000000000000038              _ZNSt16allocator_traitsISaISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEE12_S_constructIS6_JS6_EEENSt9enable_ifIXsrNS8_18__construct_helperIT_JDpT0_EEE5valueEvE4typeERS7_PSC_DpOSD_
+000000000040b2a8  w    F .text	000000000000001d              _ZNKSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS2_EE3getEv
+000000000040d1dc g     F .text	000000000000024a              _ZN6System7ProcessC2Ei
+000000000040b304  w    F .text	000000000000001a              _ZNSaISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS2_EEED1Ev
+0000000000000000       F *UND*	0000000000000000              _Znwm@@GLIBCXX_3.4
+0000000000000000       F *UND*	0000000000000000              _ZNKSt18basic_stringstreamIcSt11char_traitsIcESaIcEE3strEv@@GLIBCXX_3.4
+000000000040abb5  w    F .text	0000000000000047              _ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EOS6_RKS6_
+0000000000000000       F *UND*	0000000000000000              _Unwind_Resume@@GCC_3.0
+000000000040a7c2  w    F .text	000000000000003c              _ZNSt11_Tuple_implILm1EISt14default_deleteIN6System2IO13DirectoryInfoEEEEC1IS4_IEvEEOT_DpOT0_
+000000000040cdac  w    F .text	000000000000000a              _ZSt19__iterator_categoryIPcENSt15iterator_traitsIT_E17iterator_categoryERKS2_
+0000000000000000       F *UND*	0000000000000000              _ZNSs12_S_empty_repEv@@GLIBCXX_3.4
+000000000040a734  w    F .text	0000000000000049              _ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_OS6_
+000000000040aae8  w    F .text	0000000000000043              _ZNSt6vectorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EED1Ev
+000000000040b11a  w    F .text	000000000000001a              _ZNSt12_Vector_baseISsSaISsEEC2Ev
+000000000040b2c6  w    F .text	000000000000003d              _ZNSt12_Vector_baseISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EE12_Vector_implC2Ev
+000000000040aace  w    F .text	000000000000001a              _ZNSt6vectorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EEC2Ev
+0000000000000000       F *UND*	0000000000000000              _ZNSsaSERKSs@@GLIBCXX_3.4
+000000000040a826  w    F .text	0000000000000052              _ZNSt11_Tuple_implILm0EJPN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC1IRS3_JS5_EvEEOT_DpOT0_
+0000000000000000       F *UND*	0000000000000000              umask@@GLIBC_2.2.5
+000000000040bd1a  w    F .text	000000000000000a              _ZN9__gnu_cxx13new_allocatorISsEC2Ev
+000000000040b89e  w    F .text	000000000000004c              _ZN9__gnu_cxx13new_allocatorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS4_EEE9constructIS7_IS7_EEEvPT_DpOT0_
+0000000000000000       F *UND*	0000000000000000              _ZNSs6appendERKSs@@GLIBCXX_3.4
+000000000040a9a3  w    F .text	000000000000000e              _ZSt7forwardIPN6System2IO13DirectoryInfoEEOT_RNSt16remove_referenceIS4_E4typeE
+0000000000000000       F *UND*	0000000000000000              open@@GLIBC_2.2.5
+000000000040b9f6  w    F .text	000000000000001a              _ZNSaISsEC1Ev
+000000000040b5d8  w    F .text	0000000000000025              _ZSt8_DestroyIPSsEvT_S1_
+0000000000409888 g     F .text	00000000000001f9              _ZN6System2IO13DirectoryInfoC1ERKSs
+000000000040b47a  w    F .text	0000000000000038              _ZNSt12_Vector_baseISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EESaIS6_EE11_M_allocateEm
+0000000000000000       F *UND*	0000000000000000              _ZNSs4_Rep26_M_set_length_and_sharableEm@@GLIBCXX_3.4.5
+000000000040bbd4  w    F .text	000000000000004e              _ZSt34__uninitialized_move_if_noexcept_aIPSsS0_SaISsEET0_T_S3_S2_RT1_
+000000000040ab2b  w    F .text	0000000000000028              _ZStneIcSt11char_traitsIcESaIcEEbRKSbIT_T0_T1_EPKS3_
+000000000040be77  w    F .text	000000000000001a              _ZNSt16allocator_traitsISaISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEE11_S_max_sizeIKS7_EENSt9enable_ifIXsrNS8_16__maxsize_helperIT_EE5valueEmE4typeERSD_
+000000000040c898 g     F .text	0000000000000024              _ZN6System11Information6isRootEv
+0000000000000000       F *UND*	0000000000000000              _ZNSt14basic_ifstreamIcSt11char_traitsIcEE7is_openEv@@GLIBCXX_3.4
+0000000000000000       F *UND*	0000000000000000              mkdir@@GLIBC_2.2.5
+00000000004097ed g     F .text	0000000000000048              main
+000000000040bc7a  w    F .text	000000000000001a              _ZNSt16allocator_traitsISaISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEE8max_sizeERKS7_
+0000000000409100 g     F .init	0000000000000000              _init
+0000000000409aac g     F .text	0000000000000187              _ZN6System2IO13DirectoryInfo16getDirectoryInfoEv
+000000000040b99f  w    F .text	0000000000000031              _ZSt22__uninitialized_copy_aISt13move_iteratorIPSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS4_EEES8_S7_ET0_T_SB_SA_RSaIT1_E
+000000000040b820  w    F .text	000000000000001a              _ZNSaISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS2_EEEC1Ev
+000000000040a915  w    F .text	000000000000001a              _ZSt12__get_helperILm0EPN6System2IO13DirectoryInfoEISt14default_deleteIS2_EEENSt9__add_refIT0_E4typeERSt11_Tuple_implIXT_EIS7_DpT1_EE
+000000000040b83a  w    F .text	000000000000000a              _ZN9__gnu_cxx13new_allocatorISt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS4_EEED1Ev
+000000000040c9c7  w    F .text	0000000000000177              _ZN9__gnu_cxx12__to_xstringISscEET_PFiPT0_mPKS2_P13__va_list_tagEmS5_z
+000000000040bcb6  w    F .text	0000000000000019              _ZNSt13move_iteratorIPSt10unique_ptrIN6System2IO13DirectoryInfoESt14default_deleteIS3_EEEC2ES7_
+
+
