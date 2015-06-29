@@ -21,9 +21,9 @@ namespace System
 
 			int fd;
 
-			if((fd = open(path,O_RDONLY)) == -1)
+			if((fd = open(path.c_str(),O_RDONLY)) == -1)
 			{
-				throw std::runtime_error("failed to obtrain file descriptor. " + std::string{std::strerror(errno)});  
+				throw std::runtime_error("failed to obtain file descriptor. " + std::string{std::strerror(errno)});  
 			}
 
 			if(syscall(SYS_finit_module,fd,param.c_str(),0))
